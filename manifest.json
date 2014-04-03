@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "AngelList/500 Startups Connection Highlighter",
+	"description": "This extension will highlight any company and/or names that is associated with a 500 startups company.",
+	"version": "1.2.0",
+	"permissions": [
+		"http://*.angel.co/*",
+		"https://*.angel.co/*"
+	],
+	"content_scripts": [
+		{
+			"matches": ["https://angel.co/*", "http://angel.co/*"],
+			"js": ["contentscript.js"]
+		}
+	],
+	"web_accessible_resources": [
+		"scripts/*",
+		"lib/*",
+		"data/*"
+	],
+	"icons": {
+		"32": "icon.png",
+		"128": "icon_128.png"
+	}
+}
