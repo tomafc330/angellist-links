@@ -25,10 +25,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="manifest.json" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="manifest.json" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/manifest.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="15" column="4" selection-start="456" selection-end="456" vertical-scroll-proportion="0.4848485" vertical-offset="0" max-vertical-offset="663">
+                <state line="15" column="4" selection-start="456" selection-end="456" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="663">
                   <folding />
                 </state>
               </provider>
@@ -83,10 +83,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="companies.json" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="companies.json" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/external_data/companies.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="7" column="20" selection-start="103" selection-end="103" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="9537">
+                <state line="556" column="28" selection-start="8502" selection-end="8502" vertical-scroll-proportion="0.7878788" vertical-offset="9010" max-vertical-offset="9571">
                   <folding />
                 </state>
               </provider>
@@ -134,6 +134,7 @@
         <option value="$PROJECT_DIR$/contentscript.js" />
         <option value="$PROJECT_DIR$/background.js" />
         <option value="$PROJECT_DIR$/manifest.json" />
+        <option value="$PROJECT_DIR$/external_data/companies.json" />
       </list>
     </option>
   </component>
@@ -531,13 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/external_data/companies.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="20" selection-start="103" selection-end="103" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="9537">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/options.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="662" selection-end="662" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="1156">
@@ -586,7 +580,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="4" selection-start="456" selection-end="456" vertical-scroll-proportion="0.4848485" vertical-offset="0" max-vertical-offset="663">
+        <state line="15" column="4" selection-start="456" selection-end="456" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/external_data/companies.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="556" column="28" selection-start="8502" selection-end="8502" vertical-scroll-proportion="0.7878788" vertical-offset="9010" max-vertical-offset="9571">
           <folding />
         </state>
       </provider>
