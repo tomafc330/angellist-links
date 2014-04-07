@@ -35,13 +35,20 @@
 		}, 2500);
 	};
 
+	function getPortfolioCompanies() {
+		$.get(companiesSrc, function(data) { // var was injected from contentscript.js
+			portfolioCompanies = data.companies;
+			checkPortfolioCompanies();
+		});
+	};
+
 	function init() {
 		setLoading(true);
 		//need to wait for js to initialize first
 		setTimeout(function () {
 			$('.click_for_more').click();
 			//go through each of the companies and look
-			checkPortfolioCompanies();
+			getPortfolioCompanies();
 		}, 2500);
 	};
 

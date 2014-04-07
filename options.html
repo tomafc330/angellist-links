@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head><title>My Test Extension Options</title>
+	<link href="lib/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="lib/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+	<script src="lib/jquery-1.9.1.js" type="text/javascript"></script>
+	<script src="lib/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+
+<div class="jumbotron">
+	<div class="container">
+		<h1>500 Startups / AngelList Connection Highlighter</h1>
+
+		<p>This is an extension that will highlight all of the companies that 500 Startups invested in on Angel.co.</p>
+	</div>
+</div>
+<div class="container">
+	<div class="well well-lg">
+
+		<div id="success" class="hide alert alert-success">Successfully Saved.</div>
+
+
+		<h3 style="text-transform: uppercase">Configuration Options:</h3>
+		<br/>
+
+		<div class="input-group input-group-lg">
+			<input id="sourceUrl" type="text" class="form-control" placeholder="Source URL (leave blank to use default source).">
+			<span class="help-block">The source file where the extension will look to pull its data from. If you want to add/remove from the list, please point to it to a custom source. Use the <a href="http://s3.amazonaws.com/static_garage/companies.json">default source</a> for reference.</span>
+		</div>
+
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" id="includeInvestors" value="true">
+				Highlight the investors and advisors that invested in these 500.co companies.
+				<span class="help-block">This is in addition to hightlighting the 500.co companies.</span>
+			</label>
+		</div>
+
+		<div id="status"></div>
+		<p>
+			<button id="save" class="btn btn-primary btn-lg" role="button">Save</button>
+		</p>
+
+		<script src="options.js"></script>
+	</div>
+</div>
+
+
+</body>
+</html>
