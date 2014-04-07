@@ -17,7 +17,7 @@
 
 	function setLoading(show) {
 		if (show) {
-			$('body').prepend("<div id='highlight-loading' style='position: fixed; font-size: xx-large; width: 100%; text-align: center; background: yellow; opacity: 0.8; z-index: 10001'>Checking for connections...</div>")
+			$('body').prepend("<div id='highlight-loading' style='position: fixed; font-size: large; width: 100%; text-align: center; background: yellow; opacity: 0.8; z-index: 10001'><b>Checking for connections...</b></div>")
 		} else {
 			$('#highlight-loading').remove();
 		}
