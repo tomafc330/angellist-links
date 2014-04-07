@@ -18,6 +18,7 @@ chrome.storage.sync.get({
 	includeInvestors: false
 }, function (items) {
 	addVar("companiesSrc", items.sourceUrl);
+	addVar("isCheckPeople", items.includeInvestors);
 	addFile('lib/string_score.js');
 	addFile('scripts/click_and_highlight.js');
 });

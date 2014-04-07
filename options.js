@@ -1,12 +1,13 @@
 // Saves options to chrome.storage
 function save_options() {
+	var values = {};
 	var sourceUrl = document.getElementById('sourceUrl').value;
-	var includeInvestors = document.getElementById('includeInvestors').checked;
+	if (sourceUrl) {
+		values.sourceUrl = sourceUrl;
+	}
+	values.includeInvestors = document.getElementById('includeInvestors').checked;
 
-	chrome.storage.sync.set({
-		sourceUrl: sourceUrl,
-		includeInvestors: includeInvestors
-	}, function() {
+	chrome.storage.sync.set(values, function() {
 		// Update $status to let user know options were saved.
 		var $status = $('#success');
 		$status.removeClass('hide');

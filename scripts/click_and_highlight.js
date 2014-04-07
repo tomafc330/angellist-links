@@ -1,9 +1,9 @@
 (function () {
 //click on all the click_for_more first
-	function isPortfolioCompany(company) {
+	function isSimilar(haystack, needle) {
 		var isPortfolio = false;
-		$.each(portfolioCompanies, function (idx, val) {
-			var score = company.score(val);
+		$.each(haystack, function (idx, val) {
+			var score = needle.score(val);
 			if (score > 0.90) {
 				isPortfolio = true;
 			}
@@ -23,10 +23,10 @@
 		}
 	};
 
-	function checkPortfolioCompanies() {
+	function checkPortfolioCompanies(portfolioCompanies) {
 		setTimeout(function () {
 			$('.tag').each(function () {
-				if (isPortfolioCompany($(this).text())) {
+				if (isSimilar(portfolioCompanies, $(this).text())) {
 					highlight(this);
 				}
 			});
@@ -35,10 +35,24 @@
 		}, 2500);
 	};
 
+	function checkPeople(people) {
+		setTimeout(function () {
+			$('.profile-link').each(function () {
+				if (isSimilar(people, $(this).text())) {
+					highlight(this);
+				}
+			});
+
+			setLoading(false);
+		}, 5000);
+	};
+
 	function getPortfolioCompanies() {
-		$.get(companiesSrc, function(data) { // var was injected from contentscript.js
-			portfolioCompanies = data.companies;
-			checkPortfolioCompanies();
+		$.get(companiesSrc, function (data) { // var was injected from contentscript.js
+			checkPortfolioCompanies(data.companies);
+			if (isCheckPeople === 'true') { //var was injected from contentscript.js
+				checkPeople(data.people)
+			}
 		});
 	};
 
@@ -47,9 +61,10 @@
 		//need to wait for js to initialize first
 		setTimeout(function () {
 			$('.click_for_more').click();
+			$('.view_all').click();
 			//go through each of the companies and look
 			getPortfolioCompanies();
-		}, 2500);
+		}, 3500);
 	};
 
 	init();
