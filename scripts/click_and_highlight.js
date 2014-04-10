@@ -26,7 +26,7 @@
 	function checkPortfolioCompanies(portfolioCompanies) {
 		setTimeout(function () {
 			$('.tag').each(function () {
-				if (isSimilar(portfolioCompanies, $(this).text())) {
+				if (isSimilar(portfolioCompanies, $(this).text().trim())) {
 					highlight(this);
 				}
 			});
