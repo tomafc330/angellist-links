@@ -14,7 +14,7 @@ function addVar(varName, value) {
 }
 
 chrome.storage.sync.get({
-	sourceUrl: 'http://s3.amazonaws.com/static_garage/companies.json',
+	sourceUrl: 'https://s3.amazonaws.com/static_garage/companies.json',
 	includeInvestors: false
 }, function (items) {
 	addVar("companiesSrc", items.sourceUrl);
